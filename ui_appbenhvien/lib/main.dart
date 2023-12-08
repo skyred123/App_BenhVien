@@ -28,7 +28,7 @@ class MyHomePage extends StatelessWidget {
             defaultTargetPlatform == TargetPlatform.android);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Platform Detection Example'),
+        title: Text('Platform Detection Example thang'),
       ),
       body: Center(
         child: Column(
