@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ho_so_benh_nhans",
+  "info": {
+    "singularName": "ho-so-benh-nhan",
+    "pluralName": "ho-so-benh-nhans",
+    "displayName": "HoSo_BenhNhan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HoTen": {
+      "type": "string"
+    },
+    "NgaySinh": {
+      "type": "date"
+    },
+    "GioiTinh": {
+      "type": "boolean"
+    },
+    "DiaChi": {
+      "type": "text"
+    },
+    "phieu_dang_kies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::phieu-dang-ky.phieu-dang-ky",
+      "mappedBy": "ho_so_benh_nhan"
+    },
+    "lich_hens": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lich-hen.lich-hen",
+      "mappedBy": "ho_so_benh_nhan"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

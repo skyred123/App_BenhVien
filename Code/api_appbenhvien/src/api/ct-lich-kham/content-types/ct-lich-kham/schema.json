@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ct_lich_khams",
+  "info": {
+    "singularName": "ct-lich-kham",
+    "pluralName": "ct-lich-khams",
+    "displayName": "CT_LichKham"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ngaykham": {
+      "type": "date"
+    },
+    "ho_so_bac_si": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ho-so-bac-si.ho-so-bac-si",
+      "inversedBy": "ct_lich_khams"
+    },
+    "thoi_gian_kham": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::thoi-gian-kham.thoi-gian-kham",
+      "inversedBy": "ct_lich_khams"
+    },
+    "phieu_dang_ky": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::phieu-dang-ky.phieu-dang-ky",
+      "mappedBy": "ct_lich_kham"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phieu_dang_kies",
+  "info": {
+    "singularName": "phieu-dang-ky",
+    "pluralName": "phieu-dang-kies",
+    "displayName": "Phieu_DangKy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NoiDung": {
+      "type": "text"
+    },
+    "TrangThai": {
+      "default": 0,
+      "type": "integer"
+    },
+    "phieu_ho_tro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::phieu-ho-tro.phieu-ho-tro",
+      "inversedBy": "phieu_dang_ky"
+    },
+    "ho_so_benh_nhan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ho-so-benh-nhan.ho-so-benh-nhan",
+      "inversedBy": "phieu_dang_kies"
+    },
+    "ct_lich_kham": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ct-lich-kham.ct-lich-kham",
+      "inversedBy": "phieu_dang_ky"
+    }
+  }
+}

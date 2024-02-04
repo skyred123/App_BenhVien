@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ho_so_bac_sis",
+  "info": {
+    "singularName": "ho-so-bac-si",
+    "pluralName": "ho-so-bac-sis",
+    "displayName": "HoSo_BacSi",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HoTen": {
+      "type": "string"
+    },
+    "GioiTinh": {
+      "type": "boolean"
+    },
+    "KinhNghiem": {
+      "type": "text"
+    },
+    "DaoTao": {
+      "type": "text"
+    },
+    "ct_lich_khams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ct-lich-kham.ct-lich-kham",
+      "mappedBy": "ho_so_bac_si"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

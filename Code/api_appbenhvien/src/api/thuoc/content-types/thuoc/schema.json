@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "thuocs",
+  "info": {
+    "singularName": "thuoc",
+    "pluralName": "thuocs",
+    "displayName": "Thuoc",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TenThuoc": {
+      "type": "text"
+    },
+    "toa_thuocs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::toa-thuoc.toa-thuoc",
+      "inversedBy": "thuocs"
+    },
+    "TacDung": {
+      "type": "blocks"
+    },
+    "LieuDung": {
+      "type": "blocks"
+    },
+    "TacDungPhu": {
+      "type": "blocks"
+    },
+    "CanhBao": {
+      "type": "blocks"
+    },
+    "TuongTacThuoc": {
+      "type": "blocks"
+    },
+    "KhanCap": {
+      "type": "blocks"
+    },
+    "BaoQuan": {
+      "type": "blocks"
+    }
+  }
+}

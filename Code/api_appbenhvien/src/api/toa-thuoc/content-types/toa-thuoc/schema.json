@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "toa_thuocs",
+  "info": {
+    "singularName": "toa-thuoc",
+    "pluralName": "toa-thuocs",
+    "displayName": "Toa_Thuoc",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NgayLap": {
+      "type": "date"
+    },
+    "phieu_ho_tro": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::phieu-ho-tro.phieu-ho-tro",
+      "inversedBy": "toa_thuoc"
+    },
+    "thuocs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::thuoc.thuoc",
+      "mappedBy": "toa_thuocs"
+    }
+  }
+}

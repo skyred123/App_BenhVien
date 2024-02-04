@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "thong_baos",
+  "info": {
+    "singularName": "thong-bao",
+    "pluralName": "thong-baos",
+    "displayName": "Thong_Bao",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tieude": {
+      "type": "string"
+    },
+    "noidung": {
+      "type": "text"
+    },
+    "thoigian": {
+      "type": "datetime"
+    },
+    "token": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "thong_bao"
+    }
+  }
+}

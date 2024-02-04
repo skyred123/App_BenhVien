@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lich_hens",
+  "info": {
+    "singularName": "lich-hen",
+    "pluralName": "lich-hens",
+    "displayName": "Lich_Hen"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ThoiGianHen": {
+      "type": "datetime"
+    },
+    "NoiDungHen": {
+      "type": "text"
+    },
+    "TrangThai": {
+      "type": "integer",
+      "default": 0
+    },
+    "ho_so_benh_nhan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ho-so-benh-nhan.ho-so-benh-nhan",
+      "inversedBy": "lich_hens"
+    }
+  }
+}

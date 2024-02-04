@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phieu_ho_tros",
+  "info": {
+    "singularName": "phieu-ho-tro",
+    "pluralName": "phieu-ho-tros",
+    "displayName": "Phieu_HoTro",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ThoiGianLap": {
+      "type": "datetime"
+    },
+    "TinhTrang": {
+      "type": "text"
+    },
+    "NoiDung": {
+      "type": "text"
+    },
+    "KetLuan": {
+      "type": "text"
+    },
+    "phieu_dang_ky": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::phieu-dang-ky.phieu-dang-ky",
+      "mappedBy": "phieu_ho_tro"
+    },
+    "toa_thuoc": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::toa-thuoc.toa-thuoc",
+      "mappedBy": "phieu_ho_tro"
+    }
+  }
+}
